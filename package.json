@@ -78,7 +78,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://mernstackeldebbou.herokuapp.com/",
+  "proxy": "https://finaldeployeldebou.herokuapp.com/",
   "devDependencies": {
     "mini-css-extract-plugin": "^2.6.0"
   }
