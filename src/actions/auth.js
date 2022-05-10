@@ -19,7 +19,7 @@ export const loadUser = () => async (dispatch) => {
     setAuthToken(localStorage.token);
   }
   try {
-    const res = await axios.get('https://finaldeployeldebou.herokuapp.com/api/product/api/auth/me');
+    const res = await axios.get('https://finaldeployeldebou.herokuapp.com/api/auth/me');
     dispatch({
       type: USER_LOADED,
       payload: res.data,

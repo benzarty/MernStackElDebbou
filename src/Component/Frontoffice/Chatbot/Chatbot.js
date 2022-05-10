@@ -59,7 +59,7 @@ function Chatbot() {
         }
         try {
             //I will send request to the textQuery ROUTE 
-            const response = await Axios.post('/api/dialogflow/dialogflow', textQueryVariables)
+            const response = await Axios.post('https://mellifluous-queijadas-6d9ffe.netlify.app/api/dialogflow/dialogflow', textQueryVariables)
 
             for (let content of response.data.fulfillmentMessages) {
 
