@@ -22,7 +22,7 @@ function Messenger({auth:{user,loading}}) {
   const scrollRef = useRef();
 
   useEffect(() => {
-    socket.current = io("ws://localhost:5000");
+    socket.current = io("ws://finaldeployeldebou.herokuapp.com");
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({
         sender: data.senderId,
