@@ -62,7 +62,7 @@ export const register = ({
   });
 
   try {
-    const res = await axios.post('https://finaldeployeldebou.herokuapp.com/api/product/api/users', body, config);
+    const res = await axios.post('https://finaldeployeldebou.herokuapp.com/api/users', body, config);
 
     dispatch({
       type: REGISTER_SUCCESS,
@@ -91,7 +91,7 @@ export const login = (email, password) => async (dispatch) => {
   const body = JSON.stringify({ email, password });
 
   try {
-    const res = await axios.post('https://finaldeployeldebou.herokuapp.com/api/product/api/auth', body, config);
+    const res = await axios.post('https://finaldeployeldebou.herokuapp.com/api/auth', body, config);
 
     dispatch({
       type: LOGIN_SUCCESS,
@@ -129,7 +129,7 @@ export const RequestOrganisation = ( formData) => async (dispatch) => {
 
   try {
     const res = await axios.put(
-      `https://finaldeployeldebou.herokuapp.com/api/product/api/requestUser/organisation`,
+      `https://finaldeployeldebou.herokuapp.com/api/requestUser/organisation`,
       formData,
       config
     );
@@ -161,7 +161,7 @@ export const RequestDelivery = ( formData) => async (dispatch) => {
 
   try {
     const res = await axios.put(
-      `https://finaldeployeldebou.herokuapp.com/api/product/api/requestUser/delivery`,
+      `https://finaldeployeldebou.herokuapp.com/api/requestUser/delivery`,
       formData,
       config
     );
