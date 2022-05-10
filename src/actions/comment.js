@@ -18,7 +18,7 @@ export const addComment = (postId, formData) => async (dispatch) => {
   
     try {
       const res = await axios.post(
-        `https://finaldeployeldebou.herokuapp.com/api/product/api/comment/${postId}`,
+        `https://finaldeployeldebou.herokuapp.com/api/comment/${postId}`,
         formData,
         config
       );
@@ -41,7 +41,7 @@ export const addComment = (postId, formData) => async (dispatch) => {
   // Get post
 export const getComment = (id) => async (dispatch) => {
   try {
-    const res = await axios.get(`https://finaldeployeldebou.herokuapp.com/api/product/api/comment/${id}`);
+    const res = await axios.get(`https://finaldeployeldebou.herokuapp.com/api/comment/${id}`);
 
     dispatch({
       type: GET_COMMENT,
