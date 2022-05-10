@@ -15,7 +15,7 @@ const ForgetPasswordHandler= async(e)=>{
       };
       try {
         const {data} = await axios.post(
-          `/api/users/forgetpassword/`,
+          `/https://mellifluous-queijadas-6d9ffe.netlify.app/api/users/forgetpassword/`,
           {email},config
 
         );

@@ -46,7 +46,7 @@ function Messenger({auth:{user,loading}}) {
   useEffect(() => {
     const getConversations = async () => {
       try {
-        const res = await axios.get("api/conversations/" + user._id);
+        const res = await axios.get("/https://mellifluous-queijadas-6d9ffe.netlify.app/api/conversations/" + user._id);
         setConversations(res.data);
       } catch (err) {
         console.log(err);
@@ -58,7 +58,7 @@ function Messenger({auth:{user,loading}}) {
   useEffect(() => {
     const getMessages = async () => {
       try {
-        const res = await axios.get("api/messages/" + currentChat?._id);
+        const res = await axios.get("/https://mellifluous-queijadas-6d9ffe.netlify.app/api/messages/" + currentChat?._id);
         setMessages(res.data);
       } catch (err) {
         console.log(err);
@@ -86,7 +86,7 @@ function Messenger({auth:{user,loading}}) {
     });
 
     try {
-      const res = await axios.post("api/messages", message);
+      const res = await axios.post("/https://mellifluous-queijadas-6d9ffe.netlify.app/api/messages", message);
       setMessages([...messages, res.data]);
       setNewMessage("");
     } catch (err) {

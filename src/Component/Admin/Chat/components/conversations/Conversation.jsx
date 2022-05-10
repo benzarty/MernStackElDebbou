@@ -11,7 +11,7 @@ export default function Conversation({ conversation, currentUser }) {
 console.log(friendId)
     const getUser = async () => {
       try {
-        const res = await axios.get(`api/users/myprofile/${friendId}`);
+        const res = await axios.get(`/https://mellifluous-queijadas-6d9ffe.netlify.app/api/users/myprofile/${friendId}`);
         setUser(res.data);
 console.log(res.data)
 

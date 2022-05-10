@@ -21,7 +21,7 @@ function PlaceOrder(props) {
   useEffect(() => {
 
     const fetchClientSecret = async () => {
-      const data = await axios.post("/api/order/payment", {
+      const data = await axios.post("/https://mellifluous-queijadas-6d9ffe.netlify.app/api/order/payment", {
         amount:props.auth.user.Total ,
       });
    setClientSecret(data.data.clientSecret);
@@ -47,7 +47,7 @@ function PlaceOrder(props) {
        console.log(JSON.stringify(result)+"sssssssssss") 
      if(result.paymentIntent.status="succeeded"){
 
-      axios.post("/api/order/", {
+      axios.post("/https://mellifluous-queijadas-6d9ffe.netlify.app/api/order/", {
         address: props.order.address,
       });
 

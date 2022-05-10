@@ -17,7 +17,7 @@ function ResetPassword({location}) {
           };
           try {
             const {data} = await axios.put(
-              `/api/users/resetpassword/${searchParams.get("resetToken")}`,
+              `/https://mellifluous-queijadas-6d9ffe.netlify.app/api/users/resetpassword/${searchParams.get("resetToken")}`,
               {password},config
     
             );
