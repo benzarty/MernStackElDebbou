@@ -30,7 +30,7 @@ export const GetProducts = () => async (dispatch) => {
 
 export const GetProductsExchange = () => async (dispatch) => {
   try {
-    const res = await axios.get('/api/propositions');
+    const res = await axios.get('https://finaldeployeldebou.herokuapp.com/api/product/api/propositions');
 
     dispatch({
       type:GET_MY_EXCHANGE_PRODUCTS ,
@@ -49,7 +49,7 @@ export const GetProductsExchange = () => async (dispatch) => {
 
   export const getProduct = (id) => async (dispatch) => {
     try {
-      const res = await axios.get(`/api/product/${id}`);
+      const res = await axios.get(`https://finaldeployeldebou.herokuapp.com/api/product/api/product/${id}`);
   
       dispatch({
         type: GET_PRODUCT,
@@ -65,7 +65,7 @@ export const GetProductsExchange = () => async (dispatch) => {
 
   export const deleteProduct = (id) => async (dispatch) => {
     try {
-      await axios.delete(`/api/product/${id}`);
+      await axios.delete(`https://finaldeployeldebou.herokuapp.com/api/product/api/product/${id}`);
   
       dispatch({
         type: DELETE_PRODUCT,
@@ -110,7 +110,7 @@ export const addProduct = (formData) => async (dispatch) => {
   
 export const RecommandedSys = () => async (dispatch) => {
   try {
-    const res = await axios.get('/api/users/recommandedsys');
+    const res = await axios.get('https://finaldeployeldebou.herokuapp.com/api/product/api/users/recommandedsys');
 
     dispatch({
       type: RECOMMENDED_SYS,

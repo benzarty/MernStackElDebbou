@@ -21,7 +21,7 @@ export const ChangePassword = ( formData) => async (dispatch) => {
 
   try {
     const res = await axios.put(
-      `/api/users/`,
+      `https://finaldeployeldebou.herokuapp.com/api/product/api/users/`,
       formData,
       config
     );
@@ -53,7 +53,7 @@ export const PutInfo = ( formData) => async (dispatch) => {
 
   try {
     const res = await axios.put(
-      `/api/auth/`,
+      `https://finaldeployeldebou.herokuapp.com/api/product/api/auth/`,
       formData,
       config
     );
@@ -75,7 +75,7 @@ export const PutInfo = ( formData) => async (dispatch) => {
 
 export const GetUsers = () => async (dispatch) => {
   try {
-    const res = await axios.get('/api/users');
+    const res = await axios.get('https://finaldeployeldebou.herokuapp.com/api/product/api/users');
 
     dispatch({
       type: GET_USERS,
@@ -92,7 +92,7 @@ export const GetUsers = () => async (dispatch) => {
 
 export const deletePost = (id) => async (dispatch) => {
     try {
-      await axios.delete(`/api/users/${id}`);
+      await axios.delete(`https://finaldeployeldebou.herokuapp.com/api/product/api/users/${id}`);
   
       dispatch({
         type: DELETE_USER,
@@ -112,7 +112,7 @@ export const deletePost = (id) => async (dispatch) => {
  
     try {
       const res = await axios.post(
-        `/api/conversations/`,
+        `https://finaldeployeldebou.herokuapp.com/api/product/api/conversations/`,
         formData,
         
       );
